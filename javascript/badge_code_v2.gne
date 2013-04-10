@@ -1,0 +1,27 @@
+var b_txt = '';
+
+// write the badge
+	
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/26438236@N08/3062582233/"><img src="http://farm4.staticflickr.com/3021/3062582233_159ea27752_s.jpg" alt="A photo on Flickr" title="Watching a UNICEF documentary on HIV/AIDS" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/26438236@N08/3062582231/"><img src="http://farm4.staticflickr.com/3029/3062582231_06e51f0903_s.jpg" alt="A photo on Flickr" title="Boy selling shoes in Chabahar" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/26438236@N08/3063418152/"><img src="http://farm4.staticflickr.com/3146/3063418152_52fac55890_s.jpg" alt="A photo on Flickr" title="Selling shoes in Chabahar" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/26438236@N08/3063418148/"><img src="http://farm4.staticflickr.com/3140/3063418148_69416b7a25_s.jpg" alt="A photo on Flickr" title="At a community-based nutrition centre in Chabahar" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/26438236@N08/3063418138/"><img src="http://farm4.staticflickr.com/3147/3063418138_0601d1954c_s.jpg" alt="A photo on Flickr" title="Baluchi child in Chabahar" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/26438236@N08/3063418136/"><img src="http://farm4.staticflickr.com/3036/3063418136_639e87d41d_s.jpg" alt="A photo on Flickr" title="A child living in one of Iran\'s disparity provinces" height="75" width="75"></a></div>';
+
+
+b_txt += '<span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&t=8f71b16a39be5797e319b073df0f5397&fl_ev=0&lang=en&intl=us" width="0" height="0" alt="" /></span>';
+
+document.write(b_txt);
