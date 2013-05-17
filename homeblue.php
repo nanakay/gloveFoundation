@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0040)http://themes.quitenicestuff.com/relief/ -->
+<?php include("php/connection.php");?>
 <html dir="ltr" lang="en-US"><!--<![endif]--><!-- BEGIN head --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<!--Meta Tags-->
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 		
 	<!--Title-->
@@ -32,8 +33,36 @@
 	<script type="text/javascript" src="javascript/hoverIntent.js"></script>
 	<script type="text/javascript" src="javascript/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="javascript/jquery.jcarousel.min.js"></script>
-	<script type="text/javascript" src="javascript/jquery.mobilemenu.min.js"></script>
+	<!-- <script type="text/javascript" src="javascript/jquery.mobilemenu.min.js"></script>-->
 	<script type="text/javascript" src="javascript/scripts.js"></script>
+
+	<script type="text/javascript">
+		var tips;
+		function init() {
+			tips = document.getElementById("tips");
+
+			var tipsArray = new Array();
+			<?php foreach($tips as $tip){ ?>
+				tipsArray.push(<?php echo '"'.$tip.'"' ?>);
+			<?php } ?>
+
+			tips.innerHTML = tipsArray[0];
+			setInterval(setTip, 5000);
+
+			var count = 1;
+			function setTip() {
+				if (count < tipsArray.length) {
+					tips.innerHTML = tipsArray[count];
+					count += 1;
+				}
+				else {
+				count = 0;
+				}
+			}
+			console.log(67657587);
+		}
+	</script>
+	
 	
 	<!--[if IE]>
 		<script type="text/javascript" src="js/selectivizr-min.js"></script>
@@ -43,8 +72,8 @@
 </head>
 
 <!-- BEGIN body -->
-<body>
-	
+<body onload = "init()">
+
 	<!-- BEGIN DEMO ONLY -->
 	<!-- END DEMO ONLY -->
 
@@ -59,21 +88,15 @@
 			<div class="top-inner">
 			
 				<ul class="social-icons fl">
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="twitter_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="facebook_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="googleplus_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="skype_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="flickr_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="linkedin_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="vimeo_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="youtube_icon"></span></a></li>
-					<li><a href="http://themes.quitenicestuff.com/relief/#"><span id="rss_icon"></span></a></li>
+					<li><a href="#"><span id="twitter_icon"><img src = "img/social_networks/twitter.png"></span></a></li>
+					<li><a href="http://www.facebook.com/pages/Glove-Foundation-Ghana/102076483245492?fref=ts"><span id="facebook_icon"><img src = "img/social_networks/facebook.png"></span></a></li>
+					<li><a href="#"><span id="googleplus_icon"><img src = "img/social_networks/google+.png"></span></a></li>
 				</ul>
 			
-				<!--  <ul class="top-menu fr">
-					<li><a href="#">Volunteer</a><span>/</span></li>
-					<li><a href="#">Contact</a></li>
-				</ul>-->
+				<ul class="top-menu fr">
+					<li><a href="donate.htm">Volunteer</a><span>/</span></li>
+					<li><a href="contactUs.htm">Contact</a></li>
+				</ul>
 			
 			</div>
 		
@@ -84,14 +107,14 @@
 		
 			<div id="title" class="fl">
 				<h1>
-					<a href="#"><img src = "Images/logo.png"></a>
+					<a href="#"><img src = "img/logo.png"></a>
 					<span id="tagline"></span>
 				</h1>
 			</div>
 		
 			<div class="donate-btn fr">
 				<div class="donate-left"></div>
-				<a href="#" class="donate-mid"><span>Donate Now+</span></a>
+				<a href="donate.htm" class="donate-mid"><span>Donate Now+</span></a>
 				<div class="donate-right">
 					<div class="donate-right-inner"></div>
 				</div>
@@ -102,24 +125,22 @@
 		<div id="main-menu-wrapper" class="clearfix">
 			
 			<ul id="main-menu" class="fl sf-js-enabled">
-				<li class="current_page_item"><a href="/home">Home</a></li>
-				<li><a href="/latest">Latest News</a></li>
+				<li class="current_page_item"><a href="homeblue.htm">Home</a></li>
+				<li><a href="latestNews.htm">Latest News</a></li>
 				<li>
-					<a href="/gallery" class="sf-with-ul">Gallery<span class="sf-sub-indicator"> »</span></a>
+					<a href="gallery.htm" class="sf-with-ul">Gallery<span class="sf-sub-indicator"> »</span></a>
 					<ul style="display: none; visibility: hidden;">
-						<li><a href="#">Clean Water Project</a></li>
-						<li><a href="#">Fund Raising Events</a></li>
-						<li><a href="#">The Team</a></li>
-						<li><a href="#" class="sf-with-ul">Another Level<span class="sf-sub-indicator"> »</span></a>
-							<ul style="display: none; visibility: hidden;">
-								<li><a href="#">3rd</a></li>
-							</ul>
-						</li>
+						<li><a href="gallery.htm">Aerobics At Queens Hall</a></li>
+						<li><a href="gallery.htm">Asonomaso Health Screening</a></li>
+						<li><a href="gallery.htm">Odorkor Medical Outreach</a></li>
+						<li><a href="gallery.htm">Screeninn At Accra Polytechnic</a></li>
+						<li><a href="gallery.htm">Ablekuma North Health Fair</a></li>
+						<li><a href="gallery.htm">Team Workshop</a></li>
 					</ul>
 				</li>
-				<li><a href="/events">Events</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact Us</a></li>	
+				<li><a href="events.htm">Events</a></li>
+				<li><a href="aboutUs.htm">About Us</a></li>
+				<li><a href="contactUs.htm">Contact Us</a></li>	
 			</ul>
 			
 			<form method="get" action="http://google.com" id="menu-search" class="fr">
@@ -139,31 +160,31 @@
 		
 	<!-- END .slides -->
 	<div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1000%; -webkit-transition: 0s; transition: 0s; -webkit-transform: translate3d(-1880px, 0, 0);"><li class="clone" style="width: 940px; float: left; display: block;">
-				<img src="Images/slide1.jpg" alt="">
+				<img src="img/slide1.jpg" alt="">
 				<div class="flex-caption">
 					<p>Health screening at Odorkor, Accra</p>
 				</div>
 			</li>
 			<li style="width: 940px; float: left; display: block;" class="">
-				<img src="Images/mummy.jpg" alt="">
+				<img src="img/mummy.jpg" alt="">
 				<div class="flex-caption">
 					<p>Health talk on diabetes</p>
 				</div>
 			</li>
 			<li style="width: 940px; float: left; display: block;" class="flex-active-slide">
-				<img src="Images/aerobics.jpg" alt="">
+				<img src="img/aerobics.jpg" alt="">
 				<div class="flex-caption">
 					<p>Aerobics at KNUST, Kumasi</p>
 				</div>
 			</li>
 			<li style="width: 940px; float: left; display: block;">
-				<img src="Images/group.jpg" alt="">
+				<img src="img/group.jpg" alt="">
 				<div class="flex-caption">
 					<p>The Glove family after a health outreach</p>
 				</div>
 			</li>
 		<li style="width: 940px; float: left; display: block;" class="clone">
-				<img src="Images/slide4.jpg" alt="">
+				<img src="img/slide4.jpg" alt="">
 				<div class="flex-caption">
 					<p>Asonomaso health screening</p>
 				</div>
@@ -176,7 +197,7 @@
 			<div class="one-third clearfix">
 				<h3 class="title1">Who We Are<span class="title-end"></span></h3>
 				<p>GOD’S LOVE FOUNDATION (GLOVE FOUNDATION) is a not-for-profit organization that is established with the aim of promoting preventive health in Ghana. The main objective of its establishment is to promote the dissemination and exchange of medical and scientific knowledge among students, Health service workers and the general public at large.</p>
-				<p><a href="#" class="button2">Learn More</a></p>
+				<p><a href="aboutUs.htm" class="button2">Learn More</a></p>
 			</div>
 			<div class="one-third clearfix">
 				<h3 class="title1">Mission<span class="title-end"></span></h3>
@@ -184,20 +205,20 @@
 					To help promote the dissemination of medical and scientific knowledge from public health practitioners to the general public.
 					To help build a peaceful and ordered community that would be conducive to healthy academic work and socio-cultural advancement.
 					To help prevent the occurrence of preventable diseases.</p>
-				<p><a href="#" class="button2">Read More</a></p>
+				<p><a href="aboutUs.htm" class="button2">Read More</a></p>
 			</div>
 			<div class="one-third clearfix last-col">
 				<h3 class="title1">How To Help<span class="title-end"></span></h3>
-				<p>By donating to the foundation<br>By volunteering to help in our outreaches and awareness creation<br>
+				<p>By donating to the foundation<br>By volunteering to help in our outreach and awareness programmes<br>
 				By parnering with us as a co-NGO to help us in certain resources</p>
-				<p><a href="#" class="button2">Act Now</a></p>
+				<p><a href="donate.htm" class="button2">Act Now</a></p>
 			</div>
 		</div>
 		
-		<div class="section">
+		<div class="section"><h3 class = "title1">Health Tips</h3>
 			<div class="msg1">
 				<div class="edge-top"></div>
-				<p>10 health screening and seminars organized during 2011, we would like to thank everyone for their kind support</p>
+				<p id = "tips" style = "color: white">10 health screening and seminars organized during 2011, we would like to thank everyone for their kind support</p>
 				<div class="edge-bottom"></div>
 			</div>
 		</div>
@@ -207,38 +228,40 @@
 				<h3 class="title1">Latest News<span class="title-end"></span></h3>
 				<div class="blog-prev clearfix">
 					<div class="blog-prev-img">
-						<img src="Images/temp-image1.jpg" alt="">
+						<img src="img/accrapoly/apoly12.jpg" alt="">
 					</div>
 					<div class="blog-prev-content">
-						<h4><a href="#">Physical Health check at KNUST Kumasi</a><span>Posted April 2, 2013 by Cleto Amed</span></h4>
-						<p>The Foundation undertook Physical Health check (BMI, BP, Flexibility, Aerobic Capacity, Minor Musculoskeletal Injury Rehabilitation, Stretching </p>
-						<p><a href="#" class="button1">Read More »</a></p>
-					</div>
-				</div>
-				<div class="blog-prev clearfix">
-					<div class="blog-prev-img">
-						<img src="Images/temp-image2.jpg" alt="">
-					</div>
-					<div class="blog-prev-content">
-						<h4><a href="#">Health week screening exercise</a><span>Posted April 2, 2013 by Cleto Amed</span></h4>
+						<h4><a href="#">Glove Foundation's Health week screening exercise</a><span>Posted March 25, 2011 by Raymond Sintim</span></h4>
 						<p>The Foundation supported the faculty of Allied Health Science in organizing their health week and screening exercise for the Ejisu community</p>
 						<p><a href="#" class="button1">Read More »</a></p>
 					</div>
 				</div>
 				<div class="blog-prev clearfix">
 					<div class="blog-prev-img">
-						<img src="Images/temp-image3.jpg" alt="">
+						<img src="img/Ablekuma/ablekuma5.jpg" alt="">
 					</div>
 					<div class="blog-prev-content">
-						<h4><a href="#">ASESS health screening and seminar</a><span>Posted April 2, 2013 by Cleto Amed</span></h4>
-						<p>We collaborated with the Association of Sports and Exercise Science Students to organize Health Screening and Seminar for the KNUST Student</p>
+						<h4><a href="#">Glove Foundation Organizes Physical Health check at KNUST Kumasi</a><span>Posted April 22, 2011 by Raymond Sintim</span></h4>
+						<p>The Foundation undertook Physical Health check (BMI, BP, Flexibility, Aerobic Capacity, Minor Musculoskeletal Injury Rehabilitation, Stretching </p>
 						<p><a href="#" class="button1">Read More »</a></p>
+					</div>
+				</div>
+				
+				<div class="blog-prev clearfix">
+					<div class="blog-prev-img">
+						<img src="img/Ablekuma/ablekuma.JPG" alt="">
+					</div>
+					<div class="blog-prev-content">
+						<h4><a href="news/abnorth.htm">Glove Health Fair At Ablekuma North</a><span>Posted October 15, 2013 by Raymond Sintim</span></h4>
+						<p>We collaborated with the Association of Sports and Exercise Science Students to organize Health Screening and Seminar for the KNUST Student</p>
+						<p><a href="news/abnorth.htm" class="button1">Read More »</a></p>
 					</div>
 				</div>
 			</div>
 			<div class="one-third last-col">
 				<h3 class="title1">Events<span class="title-end"></span></h3>
-				<div class="event-prev clearfix">
+					There are no upcoming events
+				<!--<div class="event-prev clearfix">
 					<div class="event-prev-date">
 						<p class="month">May</p>
 						<p class="day">30</p>
@@ -270,7 +293,7 @@
 						<p><strong>Time:</strong> 10am <br>
 						<strong>Location:</strong> Cape Coast</p>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 		
@@ -296,7 +319,7 @@
 						<p>GOD’S LOVE FOUNDATION (GLOVE FOUNDATION) is a not-for-profit organization that is established with the aim of promoting preventive health in Ghana. The main objective of its establishment is to promote the dissemination and exchange of medical and scientific knowledge among students, Health service workers and the general public at large. It started softly as a students’ club titled CITA-KNUST (2010) where it was only operational in the Kwame Nkrumah University of Science and Technology. After a year, the then club became GLOVE FOUNDATION-GHANA in other to spread its selfless goals to all angles of the country.</p>
 						
 						<p></p>
-						<p style = "color: white; margin:10px 0 30px 0px;"><a href="#" class="button1">Read More »</a></p>
+						<p style = "color: white; margin:10px 0 30px 0px;"><a href="aboutUs.htm" class="button1">Read More »</a></p>
 					</div>
 				<!-- END .two-forths -->
 				</div>
@@ -308,10 +331,10 @@
 							<h4>Site Map</h4>
 						</div>
 						<ul>
-							<li><a href="#">Latest News</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Events</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="latestNews.htm">Latest News</a></li>
+							<li><a href="gallery.htm">Gallery</a></li>
+							<li><a href="events.htm">Events</a></li>
+							<li><a href="contactUs.htm">Contact Us</a></li>
 						</ul>
 					</div>
 				<!-- END .one-forth -->
@@ -321,11 +344,12 @@
 				<div class="one-forth last-col">
 					<div class="widget">
 						<div class="widget-title">
-							<h4>Flickr</h4>
+							<h4>Facebook</h4>
 						</div>
 						<div class="flickr_badge_wrapper clearfix">
-							<!--  <script type="text/javascript" src="javascript/badge_code_v2.gne"></script>--><div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/26438236@N08/3062582233/"><img src="Images/pic1.jpg" alt="A photo on Flickr" title="Watching a UNICEF documentary on HIV/AIDS" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/26438236@N08/3062582231/"><img src="Images/pic2.jpg" alt="A photo on Flickr" title="Boy selling shoes in Chabahar" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/26438236@N08/3063418152/"><img src="Images/pic6.jpg" alt="A photo on Flickr" title="Selling shoes in Chabahar" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/26438236@N08/3063418148/"><img src="Images/pic3.jpg" alt="A photo on Flickr" title="At a community-based nutrition centre in Chabahar" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/26438236@N08/3063418138/"><img src="Images/pic4.jpg" alt="A photo on Flickr" title="Baluchi child in Chabahar" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/26438236@N08/3063418136/"><img src="Images/pic5.jpg" alt="A photo on Flickr" title="A child living in one of Iran&#39;s disparity provinces" height="75" width="75"></a></div><span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="Images/p" width="0" height="0" alt=""></span>
-							<div style="clear:both;"></div>
+							
+							<div class="fb-facepile" data-href="http://www.facebook.com/pages/Glove-Foundation-Ghana/102076483245492?fref=ts" data-action="like" data-max-rows="2" data-width="300"></div>
+
 							<p class="flickr-more-photos"><a href="http://www.flickr.com/photos/39297544@N06" class="button1">View More »</a></p>
 						</div>	
 					</div>
@@ -341,7 +365,7 @@
 				</div>
 					
 				<div class=" jcarousel-skin-tango"><div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;"><div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;"><ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; width: 1880px;">
-				    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" style="float: left; list-style: none;" jcarouselindex="1"><a href="http://www.ghanayp.com/company/8665/Voltic_Gh_Ltd/website"><img src="Images/voltic.jpg" alt="" width = "200px" height = "100px"></a></li>
+				    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" style="float: left; list-style: none;" jcarouselindex="1"><a href="http://www.ghanayp.com/company/8665/Voltic_Gh_Ltd/website"><img src="img/voltic.jpg" alt="" width = "200px" height = "100px"></a></li>
 				    
 				 </ul></div><div class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal" style="display: block;" disabled="disabled"></div><div class="jcarousel-next jcarousel-next-horizontal" style="display: block;"></div></div></div>
 			
@@ -354,7 +378,7 @@
 		<div id="footer-copy-wrapper">
 			
 			<div id="footer-copy">
-				<p class="clearfix"><span class="fl">© Copyright 2013</span><span class="footer-menu fr"><a href="#">News</a> / <a href="#">About</a> / <a href="#">Donate</a></span></p>
+				<p class="clearfix"><span class="fl">© Copyright 2013</span><span class="footer-menu fr"><a href="/news">News</a> / <a href="/aboutus">About</a> / <a href="/donate">Donate</a></span></p>
 			</div>
 			
 		</div>

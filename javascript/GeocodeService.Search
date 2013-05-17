@@ -1,0 +1,49 @@
+_xdc_._yhp8lk && _xdc_._yhp8lk( {
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "London",
+               "short_name" : "London",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "United Kingdom",
+               "short_name" : "GB",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "London, UK",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 51.67234320,
+                  "lng" : 0.14787970
+               },
+               "southwest" : {
+                  "lat" : 51.38494009999999,
+                  "lng" : -0.35146830
+               }
+            },
+            "location" : {
+               "lat" : 51.51121389999999,
+               "lng" : -0.11982440
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 51.67234320,
+                  "lng" : 0.14787970
+               },
+               "southwest" : {
+                  "lat" : 51.38494009999999,
+                  "lng" : -0.35146830
+               }
+            }
+         },
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
+ )
