@@ -13,7 +13,7 @@ a, .top-menu li, .footer-menu li, .button1, #footer .button1, .button2, .button3
 }
 
 #header, .msg1, .donate-btn .donate-right, #content .widget .widget-title, #footer-wrapper {
-	background: url(../../images/bg.png) #1581af;
+	background: url(images/bg.png) #1581af;
 }
 
 #main-menu .current_page_item a, #main-menu .current-menu-item a,
@@ -29,11 +29,11 @@ a, .top-menu li, .footer-menu li, .button1, #footer .button1, .button2, .button3
 
 .blog-title .comment-count .comment-point,
 .blog-title-single .comment-count .comment-point {
-	background: url(../../images/comment-point.png) #007fff no-repeat;
+	background: url(images/comment-point.png) #007fff no-repeat;
 }
 
 #twitter_icon, #facebook_icon, #googleplus_icon, #skype_icon, #flickr_icon, #linkedin_icon, #vimeo_icon, #youtube_icon, #rss_icon {
-	background: url(../../images/social-icons.png) no-repeat #007fff;
+	background: url(images/social-icons.png) no-repeat #007fff;
 }
 
 /* Not Related to colours but must go below where image is called */
@@ -84,8 +84,8 @@ a, .top-menu li, .footer-menu li, .button1, #footer .button1, .button2, .button3
 }
 
 .flex-direction-nav .flex-prev,.flex-direction-nav .flex-next {
-	/*background: url(../../images/direction-controls.png) #0b3b83;*/
-	/*background: url(/Images/go_right.png) #0b3b83;*/
+	background: url(images/direction-controls.png) #0b3b83;
+	/*background: url(images/go_right.png) #0b3b83;*/
 }
 
 .flex-direction-nav .flex-next {

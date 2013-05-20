@@ -53,13 +53,18 @@
 			function setTip() {
 				if (count < tipsArray.length) {
 					tips.innerHTML = tipsArray[count];
+
+					// var current_url = location.href;
+					// var target_url = current_url + "#tips_container";
+
+					// location.href = target_url;
+
 					count += 1;
 				}
 				else {
 				count = 0;
 				}
 			}
-			console.log(67657587);
 		}
 	</script>
 	
@@ -88,9 +93,9 @@
 			<div class="top-inner">
 			
 				<ul class="social-icons fl">
-					<li><a href="#"><span id="twitter_icon"><img src = "img/social_networks/twitter.png"></span></a></li>
-					<li><a href="http://www.facebook.com/pages/Glove-Foundation-Ghana/102076483245492?fref=ts"><span id="facebook_icon"><img src = "img/social_networks/facebook.png"></span></a></li>
-					<li><a href="#"><span id="googleplus_icon"><img src = "img/social_networks/google+.png"></span></a></li>
+					<li><a href="#"><span id="twitter_icon"></span></a></li>
+					<li><a href="http://www.facebook.com/pages/Glove-Foundation-Ghana/102076483245492?fref=ts"><span id="facebook_icon"></span></a></li>
+					<li><a href="#"><span id="googleplus_icon"></span></a></li>
 				</ul>
 			
 				<ul class="top-menu fr">
@@ -215,7 +220,7 @@
 			</div>
 		</div>
 		
-		<div class="section"><h3 class = "title1">Health Tips</h3>
+		<div id = "tips_container" class="section"><h3 class = "title1">Health Tips</h3>
 			<div class="msg1">
 				<div class="edge-top"></div>
 				<p id = "tips" style = "color: white">10 health screening and seminars organized during 2011, we would like to thank everyone for their kind support</p>

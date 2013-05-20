@@ -25,7 +25,3 @@ function init() {
 	}
 
 }
-
-function action(content) {
-	tips.innerHTML = content;
-}
